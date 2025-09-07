@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+    /*
+    PROBLEMA: MÉDIA DO ALUNO
+    Pergunte ao professor quantas notas o aluno obteve. Na sequência, usando for, peça para o professor informar todas as notas do aluno.
+    Calcule a média das notas e apresente o resultado na tela.
+    */
+
+    //ENTRADA
+let quantas = Number(prompt('Quantas notas o aluno obteve?'));
+let numero = 0;
+let soma = 0;
+    //PROCESSAMENTO
+for (let i = 0; i < quantas; i++){
+    numero = Number(prompt('Qual a nota do aluno?'));
+    soma += numero
+}    
+    //SAÍDA
+alert((soma / quantas).toFixed(1));
+</script>
