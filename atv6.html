@@ -1,16 +1,33 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: IMPRIMIR NÚMEROS
     Faça um programa que pergunte ao usuário um número inicial e um número final. Verifique se o número inicial é menor que o número final e apresente na tela os números ímpares e os números pares que estão entre os dois números. Se o número inicial for maior ou igual ao número final, apresente mensagem de erro para o usuário, informando a regra para o número inicial e número final.
     */
 
-    //ENTRADA
+  //ENTRADA
+  const numeroInicial = Number(prompt('Digite o número inicial:'))
+  const numeroFinal = Number(prompt('Digite o número final:'))
+  let mensagem = ``
+  let impars = []
+  let pares = []
 
-    
-    //PROCESSAMENTO
+  //PROCESSAMENTO
+  if (numeroInicial < numeroFinal) {
+    for (let i = numeroInicial + 1; i <= numeroFinal - 1; i++) {
+      if (i % 2 === 0) {
+        pares.push(i)
+      } else {
+        impars.push(i)
+      }
+    }
+    mensagem = `Os números ímpares entre os números ${numeroInicial} e ${numeroFinal} são : ${impars.join(
+      ', '
+    )} \n e os pares são: ${pares}`
+  } else {
+    mensagem = `O número inicial (${numeroInicial}) é igual ou maior ao número final (${numeroFinal})`
+  }
 
-    
-    //SAÍDA
-
+  //SAÍDA
+  alert(mensagem)
 </script>
