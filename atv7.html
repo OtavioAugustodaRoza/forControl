@@ -6,12 +6,11 @@
     */
 
   //ENTRADA
-  let habitantes = 80000;
-  let anos = 0;
+let anos = 0;
   //PROCESSAMENTO
-  for (anos; habitantes <= 200000; habitantes * 1.03) {    
-    document.write(anos)
-    anos++;
-  }
+for(let habitantes = 80000; habitantes < 200000; habitantes *= 1.03){
+  anos++;
+}
   //SAÍDA
+alert(`O país demorou ${anos} anos para chagar aos 200000 mil habitantes !`);
 </script>

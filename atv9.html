@@ -1,0 +1,39 @@
+<meta charset="UTF-8" />
+<script>
+  /*
+    PROBLEMA: CALCULAR POPULAÇÃO
+    Considere que a população de uma cidade seja de 50000 habitantes, crescendo 1,5% ao ano. Apresente em tela a população prevista para um prazo de 5 anos e um prazo de 10 anos. Apresente os dados em tela.
+    */
+
+  //ENTRADA
+  const progressao = {
+    habitantes: 50000,
+    crescimento: 1.015,
+
+    prazo5() {
+      let habitantes = this.habitantes
+      for (let anos = 1; anos <= 5; anos++) {
+        habitantes *= this.crescimento
+      }
+      return habitantes
+    },
+
+    prazo10() {
+      let habitantes = this.habitantes
+      for (let anos = 1; anos <= 10; anos++) {
+        habitantes *= this.crescimento
+      }
+      return habitantes
+    },
+  }
+  //PROCESSAMENTO
+
+  //SAÍDA
+  alert(
+    `No prazo de 5 anos a população é de ${progressao
+      .prazo5()
+      .toFixed(0)} mil habitantes \nNo prazo de 10 anos a população é de ${progressao
+      .prazo10()
+      .toFixed(0)} mil habitantes`
+  )
+</script>
